@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vanguard Logistics Solutions | Tampa Bay Pool Supply Distribution Hub</title>
-  <meta name="description" content="Tampa Bay warehouse and distribution hub for pool, spa and outdoor living brands. Storage, fulfillment, pickup, delivery and sales support with reach to the US, Puerto Rico and the Caribbean." />
+  <meta id="meta-desc" name="description" content="Tampa Bay warehouse and distribution hub for pool, spa and outdoor living brands. Storage, fulfillment, pickup, delivery and sales support with reach to the US, Puerto Rico and the Caribbean." />
   <meta name="theme-color" content="#0B1A3D" />
 
   <!-- Link preview (shows when the site is shared) -->
@@ -31,28 +31,40 @@
       "addressRegion": "FL",
       "postalCode": "33762",
       "addressCountry": "US"
-    }
+    },
+    "knowsLanguage": ["en", "es"]
   }
   </script>
 </head>
 
+<!--
+  HOW THE TWO LANGUAGES WORK
+  - The ENGLISH text is written right here in this file.
+  - The SPANISH text lives in js/translations.js.
+  - Each translated piece has a data-i18n="name" tag that links the two.
+  - To change wording: edit the English here AND the Spanish in js/translations.js.
+-->
+
 <body>
 
   <!-- Draft ribbon: turn off with  mockup: false  in js/site-config.js -->
-  <div class="mockup-ribbon" id="mockup-ribbon" hidden>DRAFT MOCKUP: for client review only. Content and photos are subject to change.</div>
+  <div class="mockup-ribbon" id="mockup-ribbon" hidden data-i18n="ribbon">DRAFT MOCKUP: for client review only. Content and photos are subject to change.</div>
 
   <!-- =============== HEADER / MENU =============== -->
   <header class="site-header" id="top">
-    <a class="logo" href="#top" aria-label="Vanguard Logistics Solutions, back to top">
+    <a class="logo" href="#top" aria-label="Vanguard Logistics Solutions, back to top" data-i18n-aria="logo.aria">
       <img src="images/logo/vanguard-logo-header.png" alt="Vanguard Logistics Solutions logo" width="180" height="55" />
     </a>
+
+    <!-- The menu links are filled in from js/site-config.js -->
+    <nav class="main-nav" id="main-nav" aria-label="Main menu" data-i18n-aria="nav.aria"></nav>
+
+    <!-- Language switch: shows the language you can switch TO -->
+    <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Cambiar a español">ES</button>
 
     <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
-
-    <!-- The menu links are filled in from js/site-config.js -->
-    <nav class="main-nav" id="main-nav" aria-label="Main menu"></nav>
   </header>
 
   <main>
@@ -61,39 +73,39 @@
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-text">
-          <span class="pill">Tampa Bay &middot; Pool Supply Distribution</span>
+          <span class="pill" data-i18n="hero.pill">Tampa Bay &middot; Pool Supply Distribution</span>
           <!-- EDIT: main headline -->
-          <h1>Your Tampa Bay hub with reach to the US, Puerto Rico &amp; the Caribbean.</h1>
+          <h1 data-i18n="hero.title">Your Tampa Bay hub with reach to the US, Puerto Rico &amp; the Caribbean.</h1>
           <!-- EDIT: sub-headline -->
-          <p class="lead">Sell to pool pros without opening a warehouse. We store, fulfill, deliver and help sell your products from one insured Tampa Bay hub.</p>
+          <p class="lead" data-i18n="hero.lead">Sell to pool pros without opening a warehouse. We store, fulfill, deliver and help sell your products from one insured Tampa Bay hub.</p>
           <div class="btn-row">
-            <a href="#contact" class="btn btn-orange">Book a pilot</a>
-            <a href="#" class="btn btn-outline" data-site-phone-link>Call us</a>
+            <a href="#contact" class="btn btn-orange" data-i18n="hero.cta">Book a pilot</a>
+            <a href="#" class="btn btn-outline" data-site-phone-link data-phone-prefix>Call us</a>
           </div>
         </div>
         <div class="hero-photo">
-          <img src="images/hero/warehouse.jpg" alt="Inside the Vanguard Tampa Bay warehouse: forklift and pallet racking stocked with pool products" />
+          <img src="images/hero/warehouse.jpg" alt="Inside the Vanguard Tampa Bay warehouse: forklift and pallet racking stocked with pool products" data-i18n-alt="hero.alt" />
         </div>
       </div>
     </section>
 
-    <!-- =============== WHAT WE DO / WHO WE HELP / WHY -->
+    <!-- =============== WHAT WE DO / WHO WE HELP / WHY =============== -->
     <section class="section wrap" id="about-us">
       <div class="three-col">
         <div class="col">
-          <h2 class="eyebrow">What we do</h2>
+          <h2 class="eyebrow" data-i18n="intro.what.h">What we do</h2>
           <!-- EDIT -->
-          <p>Storage, order fulfillment, a retail counter, pickup &amp; delivery, and distribution support, all from one Tampa Bay hub.</p>
+          <p data-i18n="intro.what.p">Storage, order fulfillment, a retail counter, pickup &amp; delivery, and distribution support, all from one Tampa Bay hub.</p>
         </div>
         <div class="col">
-          <h2 class="eyebrow">Who we help</h2>
+          <h2 class="eyebrow" data-i18n="intro.who.h">Who we help</h2>
           <!-- EDIT -->
-          <p>Pool chemical, equipment, parts and accessory brands that want new sales without a local footprint.</p>
+          <p data-i18n="intro.who.p">Pool chemical, equipment, parts and accessory brands that want new sales without a local footprint.</p>
         </div>
         <div class="col">
-          <h2 class="eyebrow">Why it matters</h2>
+          <h2 class="eyebrow" data-i18n="intro.why.h">Why it matters</h2>
           <!-- EDIT -->
-          <p>Serve the US, Puerto Rico and the Caribbean without the cost, lease or risk of your own location. We are fully insured.</p>
+          <p data-i18n="intro.why.p">Serve the US, Puerto Rico and the Caribbean without the cost, lease or risk of your own location. We are fully insured.</p>
         </div>
       </div>
     </section>
@@ -101,19 +113,19 @@
     <!-- =============== SERVICES (9 ways) =============== -->
     <section class="section section-tint" id="services">
       <div class="wrap">
-        <h2 class="eyebrow">What we do</h2>
-        <h3 class="section-title">Nine ways we support your growth.</h3>
+        <h2 class="eyebrow" data-i18n="svc.eyebrow">What we do</h2>
+        <h3 class="section-title" data-i18n="svc.title">Nine ways we support your growth.</h3>
         <!-- EDIT: add, remove or reword items. Keep the same <li> pattern. -->
         <ol class="service-grid">
-          <li><span class="num">01</span><div><strong>Brand-owned inventory storage</strong><p>Your stock stays yours, safe and organized in our warehouse.</p></div></li>
-          <li><span class="num">02</span><div><strong>Local pickup for pool pros</strong><p>Pool professionals pick up at our Clearwater counter.</p></div></li>
-          <li><span class="num">03</span><div><strong>Delivery to distributors, builders &amp; retail</strong><p>Our Sprinter van fleet puts product where it's needed.</p></div></li>
-          <li><span class="num">04</span><div><strong>Order fulfillment support</strong><p>Orders picked, packed and shipped for you.</p></div></li>
-          <li><span class="num">05</span><div><strong>Tabletop &amp; demo events</strong><p>We show your products to the people who buy them.</p></div></li>
-          <li><span class="num">06</span><div><strong>Retail visibility</strong><p>Your brand on the counter and in front of customers.</p></div></li>
-          <li><span class="num">07</span><div><strong>Inventory &amp; sales reporting</strong><p>Simple reports so you know what's moving.</p></div></li>
-          <li><span class="num">08</span><div><strong>Monthly product training</strong><p>Pros learn your products from hands-on sessions.</p></div></li>
-          <li><span class="num">09</span><div><strong>Sprinter van fleet</strong><p>Our own vehicles for reliable local delivery.</p></div></li>
+          <li><span class="num">01</span><div><strong data-i18n="svc.1.h">Brand-owned inventory storage</strong><p data-i18n="svc.1.p">Your stock stays yours, safe and organized in our warehouse.</p></div></li>
+          <li><span class="num">02</span><div><strong data-i18n="svc.2.h">Local pickup for pool pros</strong><p data-i18n="svc.2.p">Pool professionals pick up at our Clearwater counter.</p></div></li>
+          <li><span class="num">03</span><div><strong data-i18n="svc.3.h">Delivery to distributors, builders &amp; retail</strong><p data-i18n="svc.3.p">Our Sprinter van fleet puts product where it's needed.</p></div></li>
+          <li><span class="num">04</span><div><strong data-i18n="svc.4.h">Order fulfillment support</strong><p data-i18n="svc.4.p">Orders picked, packed and shipped for you.</p></div></li>
+          <li><span class="num">05</span><div><strong data-i18n="svc.5.h">Tabletop &amp; demo events</strong><p data-i18n="svc.5.p">We show your products to the people who buy them.</p></div></li>
+          <li><span class="num">06</span><div><strong data-i18n="svc.6.h">Retail visibility</strong><p data-i18n="svc.6.p">Your brand on the counter and in front of customers.</p></div></li>
+          <li><span class="num">07</span><div><strong data-i18n="svc.7.h">Inventory &amp; sales reporting</strong><p data-i18n="svc.7.p">Simple reports so you know what's moving.</p></div></li>
+          <li><span class="num">08</span><div><strong data-i18n="svc.8.h">Monthly product training</strong><p data-i18n="svc.8.p">Pros learn your products from hands-on sessions.</p></div></li>
+          <li><span class="num">09</span><div><strong data-i18n="svc.9.h">Sprinter van fleet</strong><p data-i18n="svc.9.p">Our own vehicles for reliable local delivery.</p></div></li>
         </ol>
       </div>
     </section>
@@ -122,24 +134,24 @@
     <section class="section wrap" id="manufacturers">
       <div class="split">
         <div class="cta-box">
-          <h2 class="eyebrow eyebrow-teal">Manufacturers</h2>
+          <h2 class="eyebrow eyebrow-teal" data-i18n="mfr.eyebrow">Manufacturers</h2>
           <!-- EDIT -->
-          <h3>Want us to represent your brand?</h3>
-          <p>Start with a Tampa Bay pilot: pick a few SKUs, get simple reporting, and test demand before you scale.</p>
+          <h3 data-i18n="mfr.title">Want us to represent your brand?</h3>
+          <p data-i18n="mfr.p">Start with a Tampa Bay pilot: pick a few SKUs, get simple reporting, and test demand before you scale.</p>
           <ul class="tags">
-            <li>Territory development</li>
-            <li>Representation</li>
-            <li>Product launches</li>
-            <li>Dealer &amp; distributor development</li>
+            <li data-i18n="mfr.tag1">Territory development</li>
+            <li data-i18n="mfr.tag2">Representation</li>
+            <li data-i18n="mfr.tag3">Product launches</li>
+            <li data-i18n="mfr.tag4">Dealer &amp; distributor development</li>
           </ul>
-          <a href="#contact" class="btn btn-orange">Start a pilot</a>
+          <a href="#contact" class="btn btn-orange" data-i18n="mfr.cta">Start a pilot</a>
         </div>
 
         <div class="markets" id="markets">
-          <h2 class="visually-hidden">Markets we serve</h2>
+          <h2 class="visually-hidden" data-i18n="mkt.hidden">Markets we serve</h2>
           <!-- EDIT: markets. Add/remove tiles. -->
-          <div class="tile"><strong>Pool &amp; Spa</strong><span>Chemicals &middot; equipment &middot; parts</span></div>
-          <div class="tile"><strong>Outdoor Living</strong><span>Kitchens &middot; lighting &middot; furniture</span></div>
+          <div class="tile"><strong data-i18n="mkt.1.h">Pool &amp; Spa</strong><span data-i18n="mkt.1.p">Chemicals &middot; equipment &middot; parts</span></div>
+          <div class="tile"><strong data-i18n="mkt.2.h">Outdoor Living</strong><span data-i18n="mkt.2.p">Kitchens &middot; lighting &middot; furniture</span></div>
         </div>
       </div>
     </section>
@@ -148,50 +160,54 @@
     <section class="section section-navy" id="territory">
       <div class="wrap territory">
         <div class="territory-text">
-          <h2 class="eyebrow eyebrow-teal">Territory</h2>
+          <h2 class="eyebrow eyebrow-teal" data-i18n="ter.eyebrow">Territory</h2>
           <!-- EDIT -->
-          <h3 class="section-title">One Tampa Bay hub. A much bigger reach.</h3>
-          <p>Local pickup and van delivery around the Gulf Coast, with distribution to the rest of the US, Puerto Rico and the Caribbean.</p>
+          <h3 class="section-title" data-i18n="ter.title">One Tampa Bay hub. A much bigger reach.</h3>
+          <p data-i18n="ter.p">Local pickup and van delivery around the Gulf Coast, with distribution to the rest of the US, Puerto Rico and the Caribbean.</p>
         </div>
         <!-- Rings graphic: drawn with CSS, no image needed -->
-        <div class="rings" role="img" aria-label="Map graphic: Tampa Bay hub in the center, then the Gulf Coast, then the US, Puerto Rico and the Caribbean">
-          <div class="ring ring-3"><span class="ring-label">US &middot; Puerto Rico &middot; Caribbean</span></div>
-          <div class="ring ring-2"><span class="ring-label">Gulf Coast</span></div>
-          <div class="ring ring-1"><span class="hub-dot"></span><span class="ring-label">Tampa Bay hub</span></div>
+        <div class="rings" role="img" aria-label="Map graphic: Tampa Bay hub in the center, then the Gulf Coast, then the US, Puerto Rico and the Caribbean" data-i18n-aria="ter.aria">
+          <div class="ring ring-3"><span class="ring-label" data-i18n="ter.r3">US &middot; Puerto Rico &middot; Caribbean</span></div>
+          <div class="ring ring-2"><span class="ring-label" data-i18n="ter.r2">Gulf Coast</span></div>
+          <div class="ring ring-1"><span class="hub-dot"></span><span class="ring-label" data-i18n="ter.r1">Tampa Bay hub</span></div>
         </div>
       </div>
     </section>
 
     <!-- =============== BRANDS =============== -->
     <section class="section wrap" id="brands">
-      <h2 class="eyebrow">Brands</h2>
-      <h3 class="section-title">Brands we work with.</h3>
-      <!-- EDIT: replace each placeholder with <img src="images/brands/name.png" alt="Brand name logo"> -->
+      <h2 class="eyebrow" data-i18n="brands.eyebrow">Brands</h2>
+      <h3 class="section-title" data-i18n="brands.title">Brands we work with.</h3>
+      <!-- EDIT: replace each placeholder with an <img src="images/brands/name.png" alt="Brand name logo"> -->
       <div class="brand-row">
-        <div class="brand-logo">Your logo</div><div class="brand-logo">Your logo</div><div class="brand-logo">Your logo</div>
-        <div class="brand-logo">Your logo</div><div class="brand-logo">Your logo</div><div class="brand-logo">Your logo</div>
+        <div class="brand-logo" data-i18n="brands.logo">Your logo</div>
+        <div class="brand-logo" data-i18n="brands.logo">Your logo</div>
+        <div class="brand-logo" data-i18n="brands.logo">Your logo</div>
+        <div class="brand-logo" data-i18n="brands.logo">Your logo</div>
+        <div class="brand-logo" data-i18n="brands.logo">Your logo</div>
+        <div class="brand-logo" data-i18n="brands.logo">Your logo</div>
       </div>
-      <p class="note">Demo: brand logos will be added once approved by each brand.</p>
+      <p class="note" data-i18n="brands.note">Demo: brand logos will be added once approved by each brand.</p>
     </section>
 
     <!-- =============== ABOUT =============== -->
     <section class="section section-tint" id="about">
       <div class="wrap about">
         <div class="about-photos">
-          <img src="images/gallery/about-racks.jpg" alt="Pallet racking stocked with pool products at the Vanguard hub" loading="lazy" />
-          <img src="images/gallery/about-stock.jpg" alt="Forklift and pallets of product on the Vanguard warehouse floor" loading="lazy" />
+          <img src="images/gallery/about-racks.jpg" alt="Pallet racking stocked with pool products at the Vanguard hub" data-i18n-alt="about.alt1" loading="lazy" />
+          <img src="images/gallery/about-stock.jpg" alt="Forklift and pallets of product on the Vanguard warehouse floor" data-i18n-alt="about.alt2" loading="lazy" />
         </div>
         <div class="about-text">
-          <h2 class="eyebrow">About</h2>
+          <h2 class="eyebrow" data-i18n="about.eyebrow">About</h2>
           <!-- EDIT: replace with the real story -->
-          <h3 class="section-title">A local team, fully insured, in the field every week.</h3>
-          <p>Vanguard exists to give strong brands a real Tampa Bay presence, with monthly product training, demo days and reporting you can act on.</p>
+          <h3 class="section-title" data-i18n="about.title">A local team, fully insured, in the field every week.</h3>
+          <p data-i18n="about.p">Vanguard exists to give strong brands a real Tampa Bay presence, with monthly product training, demo days and reporting you can act on.</p>
           <ul class="team">
-            <li><strong>[Name]</strong><span>Founder &middot; [title]</span></li>
-            <li><strong>[Name]</strong><span>Team member &middot; [title]</span></li>
-            <li><strong>[Name]</strong><span>Team member &middot; [title]</span></li>
+            <li><strong data-i18n="team.name">[Name]</strong><span data-i18n="team.r1">Founder &middot; [title]</span></li>
+            <li><strong data-i18n="team.name">[Name]</strong><span data-i18n="team.r2">Team member &middot; [title]</span></li>
+            <li><strong data-i18n="team.name">[Name]</strong><span data-i18n="team.r2">Team member &middot; [title]</span></li>
           </ul>
-          <p class="note">Demo: team names and bios to be added.</p>
+          <p class="note" data-i18n="about.note">Demo: team names and bios to be added.</p>
         </div>
       </div>
     </section>
@@ -201,23 +217,23 @@
       <div class="contact-box">
         <div>
           <!-- EDIT -->
-          <h2 class="contact-title">Let's grow your <span>market.</span></h2>
-          <p>Book a pilot at our Tampa Bay hub. Pick your SKUs, get simple reporting, and test demand before you scale.</p>
+          <h2 class="contact-title"><span data-i18n="contact.t1">Let's grow your</span> <span class="accent" data-i18n="contact.t2">market.</span></h2>
+          <p data-i18n="contact.p">Book a pilot at our Tampa Bay hub. Pick your SKUs, get simple reporting, and test demand before you scale.</p>
         </div>
         <!-- MOCKUP: the form is not connected yet. It will send to the client's email at launch. -->
         <form class="contact-form" id="contact-form">
-          <label for="email" class="visually-hidden">Your work email</label>
-          <input type="email" id="email" name="email" placeholder="Your work email" required />
-          <button type="submit" class="btn btn-orange">Get a territory plan</button>
+          <label for="email" class="visually-hidden" data-i18n="contact.label">Your work email</label>
+          <input type="email" id="email" name="email" placeholder="Your work email" data-i18n-placeholder="contact.ph" required />
+          <button type="submit" class="btn btn-orange" data-i18n="contact.btn">Get a territory plan</button>
           <p class="form-msg" id="form-msg" role="status"></p>
         </form>
       </div>
 
       <div class="contact-details">
-        <div><span class="eyebrow">Call</span><a href="#" data-site-phone-link></a></div>
-        <div><span class="eyebrow">Visit</span><span data-site="address"></span></div>
-        <div><span class="eyebrow">Hours</span><span data-site="hours"></span></div>
-        <div data-site-email-wrap hidden><span class="eyebrow">Email</span><a href="#" data-site-email-link></a></div>
+        <div><span class="eyebrow" data-i18n="contact.call">Call</span><a href="#" data-site-phone-link></a></div>
+        <div><span class="eyebrow" data-i18n="contact.visit">Visit</span><span data-site="address"></span></div>
+        <div><span class="eyebrow" data-i18n="contact.hours">Hours</span><span data-site="hours"></span></div>
+        <div data-site-email-wrap hidden><span class="eyebrow" data-i18n="contact.email">Email</span><a href="#" data-site-email-link></a></div>
       </div>
     </section>
 
@@ -232,9 +248,10 @@
   </footer>
 
   <!-- Sticky call button, phones only -->
-  <a href="#" class="call-bar" data-site-phone-link-label="Call now"></a>
+  <a href="#" class="call-bar" data-site-call-bar></a>
 
   <script src="js/site-config.js"></script>
+  <script src="js/translations.js"></script>
   <script src="js/script.js"></script>
 </body>
 

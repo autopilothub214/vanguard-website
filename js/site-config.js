@@ -11,21 +11,23 @@ const SITE = {
   phoneLink: "+13059898042",             // Digits only, used for tap-to-call
   email: "",                             // TODO: add the real email. Leave "" to hide it.
   address: "11201 49th St N, Unit B1, Clearwater, FL 33762",
-  hours: "Mon-Sat, 7:00 AM - 4:00 PM",   // Shown on the site
+  hours: "Mon-Sat, 7:00 AM - 4:00 PM",   // Shown on the site (English)
+  hoursEs: "Lun-Sáb, 7:00 AM - 4:00 PM", // Shown on the site (Spanish)
 
   // Show the "DRAFT MOCKUP" ribbon at the top? Set to false before launch.
   mockup: true,
 
   // Menu links. Each one scrolls to a section of the page.
+  // label = English, es = Spanish
   nav: [
-    { label: "Manufacturers", href: "#manufacturers" },
-    { label: "What We Do",    href: "#services" },
-    { label: "Markets",       href: "#markets" },
-    { label: "Territory",     href: "#territory" },
-    { label: "Brands",        href: "#brands" },
-    { label: "About",         href: "#about" }
+    { label: "Manufacturers", es: "Fabricantes", href: "#manufacturers" },
+    { label: "What We Do",    es: "Qué hacemos", href: "#services" },
+    { label: "Markets",       es: "Mercados",    href: "#markets" },
+    { label: "Territory",     es: "Territorio",  href: "#territory" },
+    { label: "Brands",        es: "Marcas",      href: "#brands" },
+    { label: "About",         es: "Nosotros",    href: "#about" }
   ],
-  navButton: { label: "Contact", href: "#contact" },  // The orange button in the menu
+  navButton: { label: "Contact", es: "Contacto", href: "#contact" },  // The orange button in the menu
 
   // Social links: leave "" to hide one
   social: {
