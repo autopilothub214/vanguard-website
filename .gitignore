@@ -1,0 +1,9 @@
+.DS_Store
+
+# Working files: kept on this Mac only, never published
+design/
+content/
+docs/
+CLAUDE.md
+DEV_LOG.md
+ERROR_LOG.md
